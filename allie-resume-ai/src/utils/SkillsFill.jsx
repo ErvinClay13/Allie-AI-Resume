@@ -1,4 +1,4 @@
-import { generateContent } from "./API.jsx";
+import { generateContent } from "./_temp.jsx";
 
 export const handleSkillsFill = async (formData, setFormData) => {
   const jobSkills = await generateContent(
