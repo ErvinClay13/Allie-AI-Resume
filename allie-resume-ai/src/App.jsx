@@ -5,7 +5,8 @@ import SplashScreen from "./components/SplashScreen";
 import ResumeForm from "./components/ResumeForm";
 import ResumePreview from "./components/ResumePreview";
 import ResumePreviewAlt from "./components/ResumePreviewAlt";
-import { generateContent } from "./API.jsx";
+import { generateContent } from "./utils/API.jsx";
+
 
 
 
