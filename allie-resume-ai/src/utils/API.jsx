@@ -155,10 +155,55 @@
 
 
 
+// import axios from "axios";
+
+// export const generateContent = async (prompt) => {
+//   // Use import.meta.env to access the API key at build time
+//   const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+
+//   if (!API_KEY) {
+//     console.error("API Key is missing! Check environment variables.");
+//     return "Error: API Key is missing";
+//   }
+
+//   try {
+//     console.log("Sending API request to OpenAI...");
+
+//     const response = await axios.post(
+//       "https://api.openai.com/v1/chat/completions",
+//       {
+//         model: "gpt-3.5-turbo",
+//         messages: [
+//           { role: "system", content: "You are a helpful assistant. Provide concise responses only." },
+//           { role: "user", content: prompt },
+//         ],
+//         max_tokens: 40,
+//       },
+//       {
+//         headers: { Authorization: `Bearer ${API_KEY}` },
+//       }
+//     );
+
+//     console.log("OpenAI API Response:", response.data);
+
+//     return response.data.choices[0].message.content.trim();
+//   } catch (error) {
+//     console.error("Error generating content:", error.response ? error.response.data : error);
+//     return "Error generating content";
+//   }
+// };
+
+
+
+
+
+
+
+
 import axios from "axios";
 
 export const generateContent = async (prompt) => {
-  // Use import.meta.env to access the API key at build time
+  // Correct way to access env vars in Vite
   const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
 
   if (!API_KEY) {
@@ -180,19 +225,22 @@ export const generateContent = async (prompt) => {
         max_tokens: 40,
       },
       {
-        headers: { Authorization: `Bearer ${API_KEY}` },
+        headers: {
+          Authorization: `Bearer ${API_KEY}`,
+          "Content-Type": "application/json"
+        },
       }
     );
 
     console.log("OpenAI API Response:", response.data);
 
-    return response.data.choices[0].message.content.trim();
+    let result = response.data.choices[0].message.content.trim();
+    return result;
   } catch (error) {
     console.error("Error generating content:", error.response ? error.response.data : error);
     return "Error generating content";
   }
 };
-
 
 
 
