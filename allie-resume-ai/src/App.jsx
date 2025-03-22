@@ -5,7 +5,9 @@ import SplashScreen from "./components/SplashScreen";
 import ResumeForm from "./components/ResumeForm";
 import ResumePreview from "./components/ResumePreview";
 import ResumePreviewAlt from "./components/ResumePreviewAlt";
-import { fetchOpenAI } from "./api"; // ✅ Import Firebase API function
+import { generateContent } from "./API.jsx";
+
+
 
 function App() {
   const [resumeData, setResumeData] = useState(null);
@@ -15,7 +17,8 @@ function App() {
   // Function to generate an AI-powered resume summary
   const generateResumeSummary = async (description) => {
     const prompt = `Generate a professional resume summary based on this experience: ${description}`;
-    const response = await fetchOpenAI(prompt);
+    const response = await generateContent(prompt);
+
     setAiGeneratedSummary(response.choices ? response.choices[0].text : "Error generating summary.");
   };
 
