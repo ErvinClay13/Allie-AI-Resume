@@ -13,7 +13,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// Replace this with your actual repo name
+const repoName = 'Allie-AI-Resume'
+
 export default defineConfig({
-  base: '/Allie-AI-Resume/',
+  base: `/${repoName}/`,
   plugins: [react()],
 })
