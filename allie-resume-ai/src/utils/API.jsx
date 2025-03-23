@@ -200,10 +200,72 @@
 
 
 
+// import axios from "axios";
+
+// export const generateContent = async (prompt) => {
+//   // Correct way to access env vars in Vite
+//   const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+
+//   if (!API_KEY) {
+//     console.error("API Key is missing! Check environment variables.");
+//     return "Error: API Key is missing";
+//   }
+
+//   try {
+//     console.log("Sending API request to OpenAI...");
+
+//     const response = await axios.post(
+//       "https://api.openai.com/v1/chat/completions",
+//       {
+//         model: "gpt-3.5-turbo",
+//         messages: [
+//           { role: "system", content: "You are a helpful assistant. Provide concise responses only." },
+//           { role: "user", content: prompt },
+//         ],
+//         max_tokens: 40,
+//       },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${API_KEY}`,
+//           "Content-Type": "application/json"
+//         },
+//       }
+//     );
+
+//     console.log("OpenAI API Response:", response.data);
+
+//     let result = response.data.choices[0].message.content.trim();
+//     return result;
+//   } catch (error) {
+//     console.error("Error generating content:", error.response?.data || error.message || error);
+//     return "Error generating content";
+//   }
+  
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import axios from "axios";
 
 export const generateContent = async (prompt) => {
-  // Correct way to access env vars in Vite
+  // Access the OpenAI API key from environment variables
   const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
 
   if (!API_KEY) {
@@ -219,7 +281,10 @@ export const generateContent = async (prompt) => {
       {
         model: "gpt-3.5-turbo",
         messages: [
-          { role: "system", content: "You are a helpful assistant. Provide concise responses only." },
+          {
+            role: "system",
+            content: "You are a helpful assistant. Provide concise responses only.",
+          },
           { role: "user", content: prompt },
         ],
         max_tokens: 40,
@@ -227,17 +292,17 @@ export const generateContent = async (prompt) => {
       {
         headers: {
           Authorization: `Bearer ${API_KEY}`,
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
       }
     );
 
     console.log("OpenAI API Response:", response.data);
 
-    let result = response.data.choices[0].message.content.trim();
+    const result = response.data.choices[0].message.content.trim();
     return result;
   } catch (error) {
-    console.error("Error generating content:", error.response ? error.response.data : error);
+    console.error("Error generating content:", error?.response?.data || error?.message || error);
     return "Error generating content";
   }
 };
