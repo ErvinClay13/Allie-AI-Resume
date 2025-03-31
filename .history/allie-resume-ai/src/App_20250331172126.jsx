@@ -29,6 +29,7 @@ function App() {
             <div className="resume-preview-container">
               <h1 className="previewHeader">Your Resume</h1>
 
+
               <div className="preview-selector">
                 <label>Choose Resume Style: </label>
                 <select

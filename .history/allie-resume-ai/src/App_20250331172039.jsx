@@ -29,6 +29,12 @@ function App() {
             <div className="resume-preview-container">
               <h1 className="previewHeader">Your Resume</h1>
 
+              {/* AI Resume Summary */}
+              <button onClick={() => generateResumeSummary(resumeData.experience)}>
+                Generate AI Summary
+              </button>
+              <p>{aiGeneratedSummary}</p>
+
               <div className="preview-selector">
                 <label>Choose Resume Style: </label>
                 <select

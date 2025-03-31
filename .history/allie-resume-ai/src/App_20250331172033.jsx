@@ -15,7 +15,14 @@ function App() {
   const [selectedPreview, setSelectedPreview] = useState("original");
  
 
-  
+  // Function to generate an AI-powered resume summary
+  const generateResumeSummary = async (description) => {
+    const prompt = `Generate a professional resume summary based on this experience: ${description}`;
+    const response = await generateContent(prompt);
+
+    setAiGeneratedSummary(response.choices ? response.choices[0].text : "Error generating summary.");
+  };
+
   return (
     <Routes>
       <Route path="/" element={<SplashScreen />} />
@@ -28,6 +35,12 @@ function App() {
           resumeData ? (
             <div className="resume-preview-container">
               <h1 className="previewHeader">Your Resume</h1>
+
+              {/* AI Resume Summary */}
+              <button onClick={() => generateResumeSummary(resumeData.experience)}>
+                Generate AI Summary
+              </button>
+              <p>{aiGeneratedSummary}</p>
 
               <div className="preview-selector">
                 <label>Choose Resume Style: </label>
