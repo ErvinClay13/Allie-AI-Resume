@@ -65,11 +65,11 @@ const ResumeForm = ({ onGenerate }) => {
 
   useEffect(() => {
     // Trigger typing effect for education if it hasn't been typed yet
-    // if (formData.education && !isTyping.education && !typingCompleted.education) {
-    //   setTypedText((prevText) => ({ ...prevText, education: "" }));
-    //   setIsTyping((prevState) => ({ ...prevState, education: true }));
-    //   typeText(formData.education, "education");
-    // }
+    if (formData.education && !isTyping.education && !typingCompleted.education) {
+      setTypedText((prevText) => ({ ...prevText, education: "" }));
+      setIsTyping((prevState) => ({ ...prevState, education: true }));
+      typeText(formData.education, "education");
+    }
 
     // Trigger typing effect for careerObj if it hasn't been typed yet
     if (formData.careerObj && !isTyping.careerObj && !typingCompleted.careerObj) {
@@ -179,7 +179,7 @@ const ResumeForm = ({ onGenerate }) => {
             </div>
 
             {/* Auto-Fill Sections */}
-            {/* <div className="educationField">
+            <div className="educationField">
               <textarea
                 name="education"
                 placeholder="Education"
@@ -194,7 +194,7 @@ const ResumeForm = ({ onGenerate }) => {
               >
                 Auto-Fill Education
               </button>
-            </div> */}
+            </div>
 
             <div className="careerObjectiveField">
               <textarea
@@ -257,12 +257,12 @@ const ResumeForm = ({ onGenerate }) => {
         <div className="editBox">
           <img className="imgAllie" src={AllieImg} alt="Allie Illustration" />
 
-          {/* <div className="editEducation">
+          <div className="editEducation">
             <h3 className="eduCol">Education</h3>
             <p className="prevEducation2">
-              {typedText.education} 
+              {typedText.education} {/* Display the typed text for education */}
             </p>
-          </div>  */}
+          </div>
 
           <div className="editCareerObj">
             <h3 className="carObjCol">Career Objective</h3>

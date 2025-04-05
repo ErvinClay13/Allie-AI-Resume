@@ -257,12 +257,12 @@ const ResumeForm = ({ onGenerate }) => {
         <div className="editBox">
           <img className="imgAllie" src={AllieImg} alt="Allie Illustration" />
 
-          {/* <div className="editEducation">
+          <div className="editEducation">
             <h3 className="eduCol">Education</h3>
             <p className="prevEducation2">
-              {typedText.education} 
+              {typedText.education} {/* Display the typed text for education */}
             </p>
-          </div>  */}
+          </div>
 
           <div className="editCareerObj">
             <h3 className="carObjCol">Career Objective</h3>
