@@ -1,0 +1,56 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/Allie_Hello2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALLIE AI Resume Builder</title>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html> -->
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/Allie_Hello2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALLIE AI Resume Builder</title>
+
+    <!-- ✅ HTML2PDF for PDF download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- ✅ PWA support -->
+    <meta name="theme-color" content="#1a1a1a" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- ✅ Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js')
+          
+
+            .then(reg => console.log('✅ Service Worker registered:', reg))
+            .catch(err => console.error('❌ Service Worker registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.formHeading {
+    display: flex;
+    justify-content: center;
+}
+
+.resume-form-container {
+    border: solid 2px black;
+    padding: 20px;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+
+.imgAllie {
+    display: flex;
+    align-self: center;
+    height: 250px;
+    width: 250px;
+
+}
+
+.nameField {
+    margin-bottom: 40px;
+}
+
+.nameField input{
+    background-color: rgb(254, 231, 255);
+}
+
+.phoneField {
+    margin-bottom: 40px;
+}
+
+.phoneField input{
+    background-color: rgb(254, 231, 255);
+}
+
+.emailField {
+    margin-bottom: 40px;
+}
+
+.emailField input{
+    background-color: rgb(254, 231, 255);
+}
+
+.jobField {
+    margin-bottom: 40px;
+}
+
+.jobField input{
+    background-color: rgb(254, 231, 255);
+}
+
+.expBtn {
+    background-color: grey;
+    margin: 40px;
+}
+
+
+.eduBtn {
+    background-color: grey;
+    margin: 40px;
+}
+
+.sklBtn {
+    background-color: grey;
+    margin: 40px;
+}
+
+.careerObjBtn {
+    background-color: grey;
+    margin: 40px;
+}
+
+.form_editBoxContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    
+}
+
+.editBox {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    max-width: 350px;
+    height: auto;
+    padding: 10px;
+    background: linear-gradient(to right, #a75fff, #feb47b);
+}
+
+.resume-form-container {
+    background: linear-gradient(to right, #a75fff, #feb47b);
+}
+
+
+.eduCol{
+    text-decoration: underline rgba(167, 167, 167, 0.314);
+}
+
+.carObjCol {
+    text-decoration: underline rgba(165, 54, 255, 0.314);
+}
+
+.expCol {
+    text-decoration: underline rgba(54, 225, 255, 0.314);
+}
+
+.sklCol {
+    text-decoration: underline rgba(255, 79, 255, 0.314);
+}
+
+.prevEducation2 {
+    font-size: 16px;
+    background-color: rgba(167, 167, 167, 0.314);
+    padding: 10px;
+}
+
+.prevCareerObj2 {
+    font-size: 16px;
+    background-color: rgba(165, 54, 255, 0.314);
+    padding: 10px;
+}
+
+.prevExperience2 {
+    font-size: 16px;
+    background-color: rgba(54, 225, 255, 0.314);
+    padding: 10px;
+}
+
+.prevSkills2 {
+    font-size: 16px;
+    background-color: rgba(255, 79, 255, 0.314);
+    padding: 10px;
+}
+
+
+
+

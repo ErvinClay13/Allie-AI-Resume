@@ -1,0 +1,167 @@
+/* .toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  font-weight: bold;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.validation-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.dashboard-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+} */
+
+
+
+
+
+
+
+
+.pdf-export-wrapper {
+  width: 816px;
+  height: 1056px;
+  background: white;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Resume structure */
+.resume-preview-template {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: "Georgia", serif;
+}
+
+/* Left sidebar */
+.left-column {
+  width: 30%;
+  background: #f0f0f0;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Right content area */
+.right-column {
+  width: 70%;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Section styles */
+.resume-section h3 {
+  font-size: 14px;
+  margin-top: 20px;
+  border-bottom: 1px solid #444;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.resume-section p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 8px 0 0;
+  white-space: pre-wrap;
+}
+
+/* Toast message */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #444;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+/* Resume preview controls (not printed) */
+.resume-controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.resume-controls button {
+  margin: 5px;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+/* Saved versions dashboard */
+.saved-resumes {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.dashboard-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dashboard-card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  width: 220px;
+  background: #fafafa;
+}
+
+.delete-all {
+  margin-top: 12px;
+  color: red;
+}
